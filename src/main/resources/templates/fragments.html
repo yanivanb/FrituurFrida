@@ -10,4 +10,13 @@
     <link rel="icon" th:href="@{/images/frida.ico}" type="image/x-icon">
     <link rel="stylesheet" th:href="@{/css/frida.css}">
   </head>
+  <ul th:fragment="sausUl">
+    <li th:each="saus : ${alleSauzen}" th:object="${saus}">
+      <a th:text="*{naam}" th:href="@{/sauzen/{id}(id=*{id})}"></a>
+      <ul>
+        <li th:each="ingredient : *{ingredienten}"
+            th:text="${ingredient}"></li>
+      </ul>
+    </li>
+  </ul>
 </div>

@@ -4,14 +4,7 @@
 <body>
 <nav th:replace="fragments::menu"></nav>
 <h1>Sauzen</h1>
-<ul>
-  <li th:each="saus : ${alleSauzen}" th:object="${saus}">
-    <span th:text="*{naam}"></span>
-    <ul>
-      <li th:each="ingredient : *{ingredienten}"
-          th:text="${ingredient}"></li>
-    </ul>
-  </li>
+<ul th:replace="fragments::sausUl(sauzen=${sauzen})">
 </ul>
 </body>
 </html>

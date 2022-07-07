@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="fragments::head(title='Frituur Frida')"></head>
+<body>
+<nav th:replace="fragments::menu"></nav>
+<div th:if="not ${saus}" class="fout">Saus niet gevonden:
+    <th:block th:text="${id}"></th:block>
+</div>
+<th:block th:if="${saus}" th:object="${saus}">
+    <h1 th:text="*{naam}"></h1>
+    <dl>
+        <ul>
+            <li th:each="ingredient : *{ingredienten}"
+                th:text="${ingredient}"></li>
+        </ul>
+        <img th:src="@{${'/images/' + saus.naam + '.png'}}" th:alt="@{${saus.naam}}"/>
+    </dl>
+</th:block>
+</body>
+</html>
