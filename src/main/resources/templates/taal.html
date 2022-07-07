@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments::head(title='Taal')"></head>
+<body>
+<nav th:replace="fragments::menu"></nav>
+<h1>
+    <th:block th:text="${taal} ? 'U spreekt nederlands' : 'U spreekt geen nederlands'"></th:block>
+</h1>
+</body>
+</html>
