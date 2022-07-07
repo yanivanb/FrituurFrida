@@ -7,5 +7,7 @@
 <h2>Adres</h2>
 <div th:object="${adres}" th:text="|*{straat} *{huisNr} *{gemeente.postcode}
 *{gemeente.naam}|"></div>
+<div>Je bezoekt ons voor de
+    <th:block th:text="${aantalBezoeken}"></th:block>° keer.</div>
 </body>
 </html>
