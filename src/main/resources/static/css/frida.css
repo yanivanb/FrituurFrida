@@ -2,3 +2,10 @@ body {
     background-color: #FFFFDE;
     font-family: sans-serif;
 }
+
+.naastMekaar {
+    padding-left: 0;
+}
+.naastMekaar li {
+    display: inline;
+}
