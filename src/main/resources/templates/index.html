@@ -3,11 +3,15 @@
 <head th:replace="fragments::head(title='Frituur Frida')"></head>
 <body>
 <nav th:replace="fragments::menu"></nav>
-<h1>We zijn vandaag <span th:text="${openGesloten}"></span></h1>
-<h2>Adres</h2>
-<div th:object="${adres}" th:text="|*{straat} *{huisNr} *{gemeente.postcode}
-*{gemeente.naam}|"></div>
-<div>Je bezoekt ons voor de
-    <th:block th:text="${aantalBezoeken}"></th:block>° keer.</div>
+<h1>Frituur Frida</h1>
+<h2><span th:text="${moment}"></span></h2>
+<dl th:object="${adres}">
+    <dt>Adres</dt>
+    <dd th:text="|*{straat} *{huisnr}|"></dd>
+    <dd th:object="${adres.gemeente}"
+        th:text="|*{naam} *{postcode}|"></dd>
+</dl>
+<div th:if="${param.snackNietGevonden}" class="fout">Snack
+    <th:block th:text="${param.snackNietGevonden}"></th:block> niet gevonden</div>
 </body>
 </html>

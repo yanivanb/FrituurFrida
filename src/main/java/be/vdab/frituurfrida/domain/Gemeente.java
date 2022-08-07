@@ -2,11 +2,11 @@ package be.vdab.frituurfrida.domain;
 
 public class Gemeente {
     private final String naam;
-    private final int postcode;
+    private final int Postcode;
 
     public Gemeente(String naam, int postcode) {
         this.naam = naam;
-        this.postcode = postcode;
+        Postcode = postcode;
     }
 
     public String getNaam() {
@@ -14,6 +14,6 @@ public class Gemeente {
     }
 
     public int getPostcode() {
-        return postcode;
+        return Postcode;
     }
 }

@@ -2,12 +2,12 @@ package be.vdab.frituurfrida.domain;
 
 public class Adres {
     private final String straat;
-    private final String huisNr;
+    private final String huisnr;
     private final Gemeente gemeente;
 
-    public Adres(String straat, String huisNr, Gemeente gemeente) {
+    public Adres(String straat, String huisnr, Gemeente gemeente) {
         this.straat = straat;
-        this.huisNr = huisNr;
+        this.huisnr = huisnr;
         this.gemeente = gemeente;
     }
 
@@ -15,8 +15,8 @@ public class Adres {
         return straat;
     }
 
-    public String getHuisNr() {
-        return huisNr;
+    public String getHuisnr() {
+        return huisnr;
     }
 
     public Gemeente getGemeente() {
