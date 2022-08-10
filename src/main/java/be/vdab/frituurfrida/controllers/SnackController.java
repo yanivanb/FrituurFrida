@@ -4,6 +4,7 @@ import be.vdab.frituurfrida.domain.Snack;
 import be.vdab.frituurfrida.exceptions.SnackNietGevondenException;
 import be.vdab.frituurfrida.forms.BeginNaamForm;
 import be.vdab.frituurfrida.services.SnackService;
+import be.vdab.frituurfrida.sessions.SausRaden;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
